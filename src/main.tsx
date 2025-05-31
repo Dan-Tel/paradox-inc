@@ -10,6 +10,7 @@ import "./index.css";
 
 import RegistrationForm from "./modules/auth/components/RegistrationForm.tsx";
 import LoginForm from "./modules/auth/components/LoginForm.tsx";
+import TaskList from "./modules/tasks/components/TaskList.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/register" /> },
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginForm />,
+  },
+  {
+    path: "/users/:userId/tasks",
+    element: <TaskList />,
   },
 ]);
 
