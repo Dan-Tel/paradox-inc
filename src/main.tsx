@@ -9,12 +9,17 @@ import {
 import "./index.css";
 
 import RegistrationForm from "./modules/auth/components/RegistrationForm.tsx";
+import LoginForm from "./modules/auth/components/LoginForm.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/register" /> },
   {
     path: "/register",
     element: <RegistrationForm />,
+  },
+  {
+    path: "/login",
+    element: <LoginForm />,
   },
 ]);
 

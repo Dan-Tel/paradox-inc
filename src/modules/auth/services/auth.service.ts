@@ -15,3 +15,7 @@ interface FormInput {
 export async function register(user: FormInput) {
   return axios.post<Response>(`${API_BASE_URL}/register`, user);
 }
+
+export async function login(user: FormInput) {
+  return axios.post<Response>(`${API_BASE_URL}/login`, user);
+}
