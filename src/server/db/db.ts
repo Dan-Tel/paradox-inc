@@ -11,4 +11,12 @@ export class DB {
 
     return DB.instance;
   }
+
+  findUser(email: string) {
+    return this.users.find((u) => u.email == email);
+  }
+
+  addUser(user: User) {
+    this.users.push(user);
+  }
 }
