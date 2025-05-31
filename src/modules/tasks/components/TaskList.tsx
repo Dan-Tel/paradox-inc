@@ -41,7 +41,7 @@ function TaskList() {
 
   function handleLogout() {
     deleteAccessToken();
-    navigate("/registration");
+    navigate("/register");
   }
 
   async function handleGetTasks() {
