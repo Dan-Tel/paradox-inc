@@ -3,7 +3,7 @@ import { DB } from "../db/db";
 
 const db = DB.getInstance();
 
-export async function getTasksByUserId(req: Request, res: Response) {
+export async function getTasks(req: Request, res: Response) {
   try {
     const { userId } = req.params;
     res.json({ tasks: db.getTasks(userId) });

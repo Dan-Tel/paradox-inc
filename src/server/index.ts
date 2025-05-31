@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { router } from "./routes/auth.routes";
+import { router } from "./routes/routes";
 
 const PORT = 5000;
 
