@@ -1,0 +1,122 @@
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  list-style: none;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.status {
+  text-align: center;
+  min-width: 100px;
+  background: #f2f2f2;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #555;
+  text-transform: capitalize;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.status:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-wrap: anywhere;
+  gap: 4px;
+}
+
+
+.title,
+.description {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input.title,
+textarea.description {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input.title:focus,
+textarea.description:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+button.edit,
+button.save,
+button.delete {
+  height: 36px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button.edit {
+  background: #e0f4ff;
+  color: #0077b6;
+  min-width: 48px;
+  max-width: 48px;
+}
+
+button.save {
+  background: #d4f8d4;
+  color: #2a7a2a;
+  min-width: 48px;
+  max-width: 48px;
+}
+
+button.delete {
+  background: #ffd5d5;
+  color: #d00000;
+  min-width: 36px;
+  max-width: 36px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.form {
+  display: flex;
+  align-items: start;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.error {
+  display: block;
+  text-align: center;
+  color: #cc0000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}

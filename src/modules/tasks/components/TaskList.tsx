@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import axios from "axios";
 import type { Task } from "../types/task.model";
+import TaskItem from "./TaskItem";
 import * as taskService from "../services/task.service";
 
 import styles from "./TaskList.module.css";
@@ -137,7 +138,14 @@ function TaskList() {
     !tasksEmptyMessage && !loadingMessage ? (
       <ul className={styles["task-list"]}>
         {getFilteredTask().map((t) => (
-          <li key={t.id}>{t.title}</li>
+          <TaskItem
+            key={t.id}
+            task={t}
+            editingMode={t.id === editingId}
+            handleDeleteTask={handleDeleteTask}
+            handleSaveTask={handleSaveTask}
+            handleEditTask={handleEditTask}
+          />
         ))}
       </ul>
     ) : null;
